@@ -6,7 +6,7 @@ import storage from 'redux-persist/lib/storage';
 import sessionStorage from 'redux-persist/lib/storage/session';
 import { reducer as uiState } from './useUiState';
 import { reducer as commonReducer } from './useCommonData';
-
+import { reducer as formReducer } from './useFormData';
 const persistConfig = {
   key: 'root',
   storage,
@@ -15,6 +15,7 @@ const persistConfig = {
 const defaultReducer = combineReducers({
   uiState,
   commonReducer,
+  formReducer,
 });
 
 const reducer =
