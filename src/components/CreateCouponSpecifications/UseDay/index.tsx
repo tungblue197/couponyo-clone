@@ -21,7 +21,7 @@ const UseDay = ({ form }: Props) => {
   const daysWatch = days.map((item) => form.watch(`useDay.${item}`));
 
   useEffect(() => {
-    if (daysWatch.every((element) => element === true) && !isActive) {
+    if (daysWatch.every((element) => element === true)) {
       form.setValue('useDay.isUseDayActive', false);
     } else {
       form.setValue('useDay.isUseDayActive', true);
